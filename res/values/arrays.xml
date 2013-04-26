@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="hotseats" translatable="false">
+<!-- qlp replace phone to settings
+        <item>intent:#Intent;action=android.intent.action.DIAL;end</item>
+-->
+	<item>intent:#Intent;action=android.intent.action.MAIN;component=com.android.settings/.Settings;end</item>
+        <item>*BROWSER*</item>
+    </string-array>
+    <array name="hotseat_icons" translatable="false">
+<!-- qlp replace phone to settings
+        <item>@drawable/hotseat_phone</item>
+-->
+	<item>@drawable/hotseat_settings</item>
+        <item>@drawable/hotseat_browser</item>
+    </array>
+</resources>
