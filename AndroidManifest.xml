@@ -19,13 +19,12 @@
 -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.launcher"
-    android:sharedUserId="@string/sharedUserId"
+    package="com.androidesk.launcher"
     >
     
-    <uses-sdk android:minSdkVersion="7"/>
+    <uses-sdk android:minSdkVersion="11"/>
 
-    <original-package android:name="com.android.launcher2" />
+    <original-package android:name="com.androidesk.launcher" />
 
     <permission
         android:name="com.android.launcher.permission.INSTALL_SHORTCUT"
@@ -65,13 +64,13 @@
     <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
     
     <application
-        android:name="com.android.launcher2.LauncherApplication"
+        android:name="com.androidesk.launcher.LauncherApplication"
         android:process="@string/process"
         android:label="@string/application_name"
         android:icon="@drawable/ic_launcher_home">
 
         <activity
-            android:name="com.android.launcher2.Launcher"
+            android:name="com.androidesk.launcher.Launcher"
             android:launchMode="singleTask"
             android:clearTaskOnLaunch="true"
             android:stateNotNeeded="true"
@@ -87,7 +86,7 @@
         </activity>
 
         <activity
-            android:name="com.android.launcher2.WallpaperChooser"
+            android:name="com.androidesk.launcher.WallpaperChooser"
             android:label="@string/pick_wallpaper"
             android:icon="@drawable/ic_launcher_wallpaper"
             android:screenOrientation="nosensor"
@@ -100,7 +99,7 @@
 
         <!-- Intent received used to install shortcuts from other applications -->
         <receiver
-            android:name="com.android.launcher2.InstallShortcutReceiver"
+            android:name="com.androidesk.launcher.InstallShortcutReceiver"
             android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
             <intent-filter>
                 <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
@@ -109,7 +108,7 @@
 
         <!-- Intent received used to uninstall shortcuts from other applications -->
         <receiver
-            android:name="com.android.launcher2.UninstallShortcutReceiver"
+            android:name="com.androidesk.launcher.UninstallShortcutReceiver"
             android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT">
             <intent-filter>
                 <action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />
@@ -118,8 +117,8 @@
 
         <!-- The settings provider contains Home's data, like the workspace favorites -->
         <provider
-            android:name="com.android.launcher2.LauncherProvider"
-            android:authorities="com.android.launcher2.settings"
+            android:name="com.androidesk.launcher.LauncherProvider"
+            android:authorities="com.androidesk.launcher.settings"
             android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"
             android:readPermission="com.android.launcher.permission.READ_SETTINGS" />
 
